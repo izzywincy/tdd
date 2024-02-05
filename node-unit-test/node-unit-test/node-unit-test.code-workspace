@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "node-unit-test",
+			"path": "."
+		},
+		{
+			"name": "tdd",
+			"path": "../../Desktop/v2/tdd"
+		},
+		{
+			"name": "node-unit-mvc",
+			"path": "../node-unit-mvc"
+		}
+	],
+	"settings": {}
+}
