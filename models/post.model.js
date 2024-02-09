@@ -30,3 +30,15 @@ exports.findPost = (obj, next) => {
     }
     return next(null,post)
 }
+
+exports.updatePost = (id, updatedFields, next) => {
+    Post.findByIdAndUpdate(id, updatedFields, { new: true }, (err, updatedPost) => {
+        if (err) {
+            return next(err, null);
+        }
+        if (!updatedPost) {
+            return next(new Error("Post not found"), null);
+        }
+        next(null, updatedPost);
+    })
+};
