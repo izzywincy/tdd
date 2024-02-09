@@ -1,6 +1,6 @@
 const sinon = require('sinon');
-const PostModel = require('../models/post.model');
-const PostController = require('../controllers/post.controller');
+const PostModel = require('../models/moduleA.model');
+const PostController = require('../controllers/moduleA.controller');
 
 describe('Post controller', () => {
     // Setup the responses
