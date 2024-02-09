@@ -1,4 +1,4 @@
-const PostModel = require('../models/moduleA.model');
+const PostModel = require('./moduleA.model');
 const PostController = {};
 
 PostController.create = (req, res) => {
