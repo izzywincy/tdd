@@ -121,7 +121,7 @@ describe('Post controller', () => {
 
         });
 
-        it('should return a server status of 500', () => {
+        it('should return a server status of 404 since post are not the same', () => {
             let req = {
                 body: {
                     _id: '123',
@@ -131,7 +131,7 @@ describe('Post controller', () => {
                 }
             };
 
-            findPostStub = sinon.stub(PostModel, 'findPost').yields({ status: 500 }, null);
+            findPostStub = sinon.stub(PostModel, 'findPost').yields({ status: 404 }, null);
 
             const statusStub = sinon.stub().returnsThis();  
             const endStub = sinon.stub();  
