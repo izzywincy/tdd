@@ -17,3 +17,16 @@ exports.createPost = (obj, next) => {
         next(err, post)
     }) 
 }
+
+exports.findPost = (obj, next) => {
+
+    try {
+        const post = Post.findById(obj._id)
+        if(!post) {
+            return next(new Error("No posts found"), {status: 404, error: "no post found"})
+        }
+    } catch {
+        return next(new Error("Something went wrong!"), { status: 500, error: "server error" });
+    }
+    return next(null,post)
+}
